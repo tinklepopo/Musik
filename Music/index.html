@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tinkle popo</title>
+	<link rel="stylesheet"  href="./jquery.mobile-1.1.1.css" />
+	<script src="./jquery.js"></script>
+	<script src="./jquery.mobile-1.1.1.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        
+        <div data-role="header">
+            <h1>Music</h1>
+        </div><!-- /header -->
+        
+        <div data-role="content">
+            <ul data-role="listview" data-filter="true" id="listview"> 
+
+			</ul> 
+        </div><!-- /content -->
+        
+        <div data-role="footer">
+            <h4>Copyright tinklepopo</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+    <script>
+        function addSome(fuga){
+            return "<li> <a target ='_blank' href='./"+fuga+".mp3'>"+fuga+"</a> </li>";
+        }
+        
+        function output(hoge){
+            for(var i=0; hoge.length>i; i++){
+                console.log(addSome(hoge[i]));
+                $("#listview").append(addSome(hoge[i]));
+                
+            }
+        }
+        var list =['4Scale_inC', '7th_et_DoFaSol', '1225', 'Ametiru', 'Arr_shugeki_kaki_others', 'Arr_Usuality', 'Beach', 'Chatte', 'Christmas_notte', 'Visiness', 'Colorful', 'Dice', 'Dolce', 'DoReMiFaFa', 'Etokodori', 'Flow_n_Rlow', 'Gentli', 'Hearts', 'Himawari', 'Hope_from_NewYear_Eve', 'KaNaTa', 'Kouyou', 'La_malice', 'Lanrelan', 'Le_Petit', 'MarumoJazz', 'Osmanthus', 'Ou_Se', 'Pianissimo', 'Piano-1', 'Pinket', 'Pit_an_Q', 'Popostimeruat', 'Sheas', 'shugeki_kaki_others', 'Tamagodon', 'the_Day_rainbow_was_born', 'TickTack', 'Trial_au_air', 'un_petit_woody', 'Universalisma', 'Usuality', 'Werther', 'Yaysama', 'Mukkr', 'Zufall', 'Taiyounohikari', 'Kossan', 'Lost', 'kokolo','Repiano_Gon','kujira','Kirby3_Lakelike'];    
+        list = list.sort();
+        
+        output(list);
+        </script>
+</body>
+</html>
